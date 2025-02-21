@@ -1,18 +1,120 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  background-color: #f8f9fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin-top: 24px;
+  margin-left: 128px;
+  margin-right: 128px;
+}
+
+.gallery-item {
+  width: calc(33.333% - 16px);
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-image {
+  transform: scale(1.0444);
+}
+
+.gallery-link {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 500;
+  color: #2e2f42;
+}
+
+input,
+textarea {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  font-size: 16px;
+  padding: 10px 14px;
+  background: #f8f9fc;
+  transition: border 0.3s ease-in-out;
+}
+
+input {
+  height: 40px;
+}
+
+textarea {
+  height: 80px;
+  resize: none;
+}
+
+input:hover,
+textarea:hover {
+  border: 1px solid #000;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid #4e75ff;
+  outline: none;
+  background: #fff;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 95px;
+  height: 40px;
+  background-color: #4e75ff;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #6c8cff;
+}
